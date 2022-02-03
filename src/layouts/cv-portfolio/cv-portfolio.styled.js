@@ -10,7 +10,7 @@ const Header = css`
 `;
 
 const Aside = css`
-  ${tw`hidden md:block p-2 bg-red-500 w-[400px]`}
+  ${tw`hidden md:block p-2 w-[400px]`}
 `;
 
 const Main = css`
