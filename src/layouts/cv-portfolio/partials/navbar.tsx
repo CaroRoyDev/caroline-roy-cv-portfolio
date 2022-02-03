@@ -26,18 +26,21 @@ const Navbar: React.FC<NavbarProps> = ({ navList }) => {
   return (
     <NavbarStyles>
       <ul>
-        {navList.map((navItem) => (
-          <li
-            key={navItem.name}
-            className={`${router.pathname === navItem.path ? "active" : ""}`}
-          >
-            <Link href={navItem.path} passHref>
-              <a aria-label={navItem.name}>
-                <FaIcon icon={navItem.iconName} />
-              </a>
-            </Link>
-          </li>
-        ))}
+        {navList.map((navItem) => {
+          const isActive = router.pathname === navItem.path;
+          return (
+            <li key={navItem.name} className={`${isActive ? "active" : ""}`}>
+              <Link href={navItem.path} passHref>
+                <a
+                  aria-label={navItem.name}
+                  tabIndex={isActive ? -1 : undefined}
+                >
+                  <FaIcon icon={navItem.iconName} />
+                </a>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </NavbarStyles>
   );

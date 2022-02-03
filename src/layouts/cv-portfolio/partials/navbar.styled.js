@@ -8,22 +8,31 @@ const CommonLink = css`
     .icon {
       ${tw`transition-all duration-300 ease-in-out`}
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
   }
 `;
 
 // ------------------- NON ACTIVE LINKS --------------------
 const LinkItem = css`
-  .icon {
-    filter: drop-shadow(2px 2px 1px #111);
-    stroke: #fff;
-    stroke-width: 1px;
-  }
+  a {
+    .icon {
+      filter: drop-shadow(2px 2px 1px #111);
+      stroke: #fff;
+      stroke-width: 1px;
+    }
 
-  &:hover,
-  &:focus {
-    filter: drop-shadow(4px 4px 2px #111);
-    stroke: transparent;
-    ${tw`text-th-primary scale-110`}
+    &:hover,
+    &:focus,
+    &:active {
+      filter: drop-shadow(4px 4px 2px #111);
+      stroke: transparent;
+      ${tw`text-th-primary scale-110`}
+    }
   }
 `;
 
@@ -38,6 +47,7 @@ const ActiveLink = css`
 
   /* Icon */
   a {
+    pointer-events: none;
     ${tw`text-th-background `}
     .icon {
       stroke: transparent;
