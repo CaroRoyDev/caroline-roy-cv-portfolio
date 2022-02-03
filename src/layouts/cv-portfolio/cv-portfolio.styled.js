@@ -4,9 +4,14 @@ const VerticalSpace = css`
   ${tw`my-0 md:my-10`}
 `;
 
+const ContentColors = css`
+  ${tw`bg-th-background text-th-foreground`}
+`;
+
 const Header = css`
   ${VerticalSpace}
-  ${tw`bg-green-600 w-[60px] md:w-[100px]  sticky`}
+  ${ContentColors}
+  ${tw` w-[60px] md:w-[100px]  sticky`}
 `;
 
 const Aside = css`
@@ -15,11 +20,12 @@ const Aside = css`
 
 const Main = css`
   ${VerticalSpace}
-  ${tw`p-3 mr-0 md:min-w-[500px]  bg-th-primary flex-grow overflow-y-scroll`}
+  ${ContentColors}
+  ${tw`p-3 mr-0 md:min-w-[500px]   flex-grow overflow-y-scroll`}
 `;
 
 const PortfolioWrapper = styled.div`
-  ${tw`flex items-stretch h-[97%] lg:mx-auto lg:container py-0 md:py-4`}
+  ${tw`flex items-stretch h-[97%] lg:(mx-auto container) py-0 md:py-4`}
 
   header {
     ${Header}
