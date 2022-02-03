@@ -4,7 +4,7 @@ const AsideStyles = styled.aside`
   ${tw`relative `}
 
   &::before {
-    ${tw`content-[''] w-full h-full absolute top-0 left-0 z-[-1] bg-cover`}
+    ${tw`content-[''] w-full h-full absolute top-0 left-0 z-[-1] bg-cover contrast-125`}
     background-image: url("${(props) => props.imageURL}");
   }
 `;

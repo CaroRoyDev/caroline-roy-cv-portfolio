@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import GlobalStyles from "./../styles/GlobalStyles";
 import CVPortfolioLayout from "../src/layouts/cv-portfolio/cv-portfolio.layout";
 import Footer from "../src/layouts/cv-portfolio/partials/footer";

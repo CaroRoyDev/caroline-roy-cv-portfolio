@@ -4,10 +4,20 @@ import tw, { theme, GlobalStyles as BaseStyles } from "twin.macro";
 
 const customStyles = css`
   body {
-    ${tw`antialiased h-screen`}
+    ${tw`antialiased h-screen p-0 m-0 `}
+    font-family: "Roboto", sans-serif;
 
-    &>div {
+    & > div {
       ${tw`h-full`}
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    * {
+      box-sizing: border-box;
     }
   }
 `;
