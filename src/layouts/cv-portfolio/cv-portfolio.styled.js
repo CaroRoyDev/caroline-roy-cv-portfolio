@@ -11,17 +11,21 @@ const ContentColors = css`
 const Header = css`
   ${VerticalSpace}
   ${ContentColors}
-  ${tw` w-[60px] md:w-[100px]  sticky`}
+  ${tw` min-w-[60px] md:min-w-[100px]  sticky`}
 `;
 
 const Aside = css`
-  ${tw`hidden md:block p-2 w-[400px]`}
+  ${tw`hidden md:block p-2 min-w-[400px]`}
 `;
 
 const Main = css`
   ${VerticalSpace}
   ${ContentColors}
-  ${tw`p-3 mr-0 md:min-w-[500px]   flex-grow overflow-y-scroll`}
+  ${tw` sm:p-10 md:p-8 lg:p-12 mr-0 md:min-w-[500px]   flex-grow overflow-y-scroll`}
+
+  h1 {
+    ${tw`lg:text-5xl font-semibold mb-6`}
+  }
 `;
 
 const PortfolioWrapper = styled.div`

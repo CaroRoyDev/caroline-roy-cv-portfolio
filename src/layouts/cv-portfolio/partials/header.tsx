@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./navbar";
 
 import HeaderStyles from "./header.styled";
-import { NavList } from "./../../../data";
+import { NavList } from "../../../../data";
 const Header = () => {
   return (
     <HeaderStyles>
